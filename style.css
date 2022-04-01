@@ -30,10 +30,11 @@
 .reset-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .reset {
-    margin-top: 30px;
+    cursor: pointer;
     appearance: none;
     border: 0;
     border-radius: 5px;
@@ -43,8 +44,14 @@
     font-size: 16px;
     font-weight: bold;
 }
+.reset_popup{
+    margin-top: 15px;
+    background: #232125;
+    color: #F3F5F1;
+}
 
 .box {
+    cursor: pointer;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     color: #F3F5F1;
@@ -87,4 +94,36 @@
 .box-bottom-right {
     border-top: 4px solid #F3F5F1;
     border-left: 4px solid #F3F5F1;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup__content {
+    border-radius: 3px;
+    background-color: white;
+    max-width: 400px;
+    padding: 30px;
+    position: relative;
+}
+#popup__message{
+    font-size: 18px;
+    text-align: center;
 }
